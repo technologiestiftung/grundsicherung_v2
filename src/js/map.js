@@ -29,7 +29,7 @@ export function map() {
     var lang = 0;
     var tooltip_map = null;
 
-	d3.json("src/config.json")
+	d3.json("config.json")
       .then(_config => {
 		config = _config;
 

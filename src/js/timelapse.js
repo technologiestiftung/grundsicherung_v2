@@ -22,7 +22,7 @@ export function timelapse() {
     var min = 0;
     var max = 30;
 
-    d3.json("src/config.json")
+    d3.json("config.json")
       .then(function(_config) {
         config = _config;
 
