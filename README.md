@@ -5,12 +5,11 @@ Second version of Grundsicherung website
 * SASS Support via [sass-loader](https://github.com/jtangelder/sass-loader)
 * Linting via [eslint-loader](https://github.com/MoOx/eslint-loader)
 
-
-
 ### Installation
 
 ```
 npm install
+npm install d3
 ```
 
 ### Start Dev Server
