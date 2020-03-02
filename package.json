@@ -1,14 +1,14 @@
 {
-  "name": "webpack-starter",
+  "name": "grundsicherung-in-berlin",
   "version": "1.0.0",
-  "description": "A light foundation for your next frontend project based on webpack.",
+  "description": "Second version of Grundsicherungs website – featuring Babel, Eslint, Webpack",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.prod.js --colors",
     "start": "webpack-dev-server --open --config webpack/webpack.config.dev.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wbkd/webpack-starter.git"
+    "url": "git+https://github.com/technologiestiftung/Grundsicherung_v2"
   },
   "keywords": [
     "webpack",
@@ -18,7 +18,7 @@
     "javascript",
     "webdev"
   ],
-  "author": "webkid.io",
+  "author": "Technologiestifutng Berlin",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/wbkd/webpack-starter/issues"
@@ -48,6 +48,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.8.3",
-    "core-js": "^3.6.4"
+    "core-js": "^3.6.4",
+    "d3": "^5.15.0",
+    "topojson-client": "^3.1.0"
   }
 }
