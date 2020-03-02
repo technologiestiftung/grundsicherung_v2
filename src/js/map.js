@@ -32,7 +32,6 @@ export function map() {
 	d3.json("src/config.json")
       .then(_config => {
 		config = _config;
-		console.log("inside map");
 
         d3.json("data/xii.geojson").then(data => {
           // Setup Map

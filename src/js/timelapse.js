@@ -30,7 +30,6 @@ export function timelapse() {
           projection_timelapse = d3
             .geoMercator()
             .fitSize([width, height], data);
-            console.log('inside map');
           path_timelapse = d3.geoPath().projection(projection_timelapse);
         });
 

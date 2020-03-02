@@ -1,4 +1,4 @@
-import $ from "jquery";
+import {jQuery as $} from 'jquery';
 
 export function scroll2top() {
   // ===== Scroll to Top ====
