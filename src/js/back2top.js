@@ -1,3 +1,5 @@
+import $ from "jquery";
+
 export function scroll2top() {
   // ===== Scroll to Top ====
   $(window).scroll(function() {
