@@ -1,5 +1,3 @@
-import { jQuery as $ } from "jquery";
-
 export function counter() {
   $(".counter").each(function() {
     $({ Counter: 0 }).animate(

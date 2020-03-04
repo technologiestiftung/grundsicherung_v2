@@ -12,6 +12,6 @@ document.addEventListener("DOMContentLoaded", function() {
   map();
   createLineChart();
   timelapse();
-  // counter();
+  counter();
   scroll2top();
 });
