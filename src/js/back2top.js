@@ -1,7 +1,4 @@
-import {jQuery as $} from 'jquery';
-
 export function scroll2top() {
-  // ===== Scroll to Top ====
   $(window).scroll(function() {
     if ($(this).scrollTop() >= 200) {
       // If page is scrolled more than 200px

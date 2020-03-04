@@ -1,8 +1,6 @@
-import {jQuery as $} from 'jquery';
-
 export function counter() {
   $(".counter").each(function() {
-    jQuery({ Counter: 0 }).animate(
+    $({ Counter: 0 }).animate(
       { Counter: $(this).text() },
       {
         duration: 1000,
