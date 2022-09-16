@@ -7,7 +7,8 @@ import os
 plr = gpd.read_file('data/raw-data/lor/lor_planungsraeume.geojson', encoding='utf-8')
 
 # old data: stgbxIIlor.csv
-df = pd.read_csv('data/raw-data/lor/2018_new.csv', sep=";", dtype={'Kennung':str}, na_values=['.', 'x'], encoding='utf-8')
+df = pd.read_csv('data/raw-data/lor/2021.csv', sep=";", dtype={'Kennung':str}, na_values=['.', 'x'], encoding='utf-8')
+df = df.fillna(0)
 df.set_index('Kennung', inplace=True)
 
 data = df.join(plr.set_index('spatial_name'), rsuffix='_r')
@@ -78,7 +79,7 @@ for i in range (2006, 2022):
 #round to two numbers after comma
 df = df.round(2)
 
-df = df.fillna('null')
+df = df.fillna(0)
 
 df.to_csv('data/preprocessed_data/timelapse_full.csv', encoding='utf-8')
 
