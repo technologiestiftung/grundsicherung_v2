@@ -82,8 +82,9 @@ for i in range (2006, 2022):
 
 #replace '.' with 0
 df = df.replace(to_replace='.', value=0)
-df = df.fillna('NA')
 df = df.round(2)
+df = df.fillna('NA')
+
 
 df.to_csv('data/preprocessed_data/timelapse_full.csv', encoding='utf-8')
 
