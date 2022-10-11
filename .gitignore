@@ -14,3 +14,5 @@ yarn.lock
 .yarnclean
 .vscode
 .python-version
+preprocess-data/data/preprocessed_data/timeline.csv
+preprocess-data/data/preprocessed_data/timeline.csv

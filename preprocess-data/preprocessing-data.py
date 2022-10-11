@@ -7,7 +7,7 @@ import os
 plr = gpd.read_file('data/raw-data/lor/lor_planungsraeume.geojson', encoding='utf-8')
 
 # old data: stgbxIIlor.csv
-df = pd.read_csv('data/raw-data/lor/2021.csv', sep=";", dtype={'Kennung':str}, na_values=['x'], encoding='utf-8')
+df = pd.read_csv('data/raw-data/lor/2021_new.csv', sep=";", dtype={'Kennung':str}, na_values=['x'], encoding='utf-8')
 df = df.fillna('NA')
 df = df.replace(to_replace='.', value=0)
 
@@ -16,15 +16,20 @@ df.set_index('Kennung', inplace=True)
 data = df.join(plr.set_index('spatial_name'), rsuffix='_r')
 
 data.rename(columns={
+       ' je 100 der Bevölkerung1)\n(insgesamt)': 'Bevölkerung insgesamt',
        ' je 100 der Bevölkerung1)\n(18 - 64 Jahre,\ninsgesamt)': '18-64 Jahre insgesamt',
        ' je 100 der Bevölkerung1)\n(ab 65 Jahre,\ninsgesamt)': 'ab 65 Jahre insgesamt',
+       ' je 100 der Bevölkerung1)\n(Deutsche insgesamt)': 'Deutsche insgesamt',
        ' je 100 der Bevölkerung1)\n(18 - 64 Jahre,\nDeutsche)': '18-64 Jahre Deutsche',
        ' je 100 der Bevölkerung1)\n(ab 65 Jahre,\nDeutsche)': 'ab 65 Jahre Deutsche',
+       ' je 100 der Bevölkerung1)\n(Ausländer insgesamt)': 'Ausländer insgesamt',
        ' je 100 der Bevölkerung1)\n(18 - 64 Jahre,\nAusländer)': '18-64 Jahre Ausländer',
        ' je 100 der Bevölkerung1)\n(ab 65 Jahre,\nAusländer)': 'ab 65 Jahre Ausländer'
 }, inplace=True)
 
 gpd.GeoDataFrame(data).to_file('data/preprocessed_data/xii.geojson', driver='GeoJSON', encoding='utf-8')
+
+quit()
 
 full_df = pd.DataFrame()
 
