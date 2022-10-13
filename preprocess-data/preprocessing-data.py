@@ -70,6 +70,7 @@ for i in range (2006, 2022):
 
     #solange es Planungsräume gibt
     df_temp = df_temp[df_temp.Name.notnull() & (df_temp.Name != 'Name')]
+    print(df_temp.head())
     
     #create smaller df
     df_temp = df_temp[['Kennung', 'Name', 'y' + str(i)]]
@@ -90,7 +91,7 @@ df = df.fillna('NA')
 
 
 df.to_csv('data/preprocessed_data/timelapse_full.csv', encoding='utf-8')
-
+print("yes")
 # this setup expects the rows to always stay in the same order (e.g.: row 6 = "Empfänger/innen insgesamt").
 # If the order changes, the outcome data is faulty
 
