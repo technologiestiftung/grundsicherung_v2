@@ -191,7 +191,7 @@ export function map() {
         // make sure the attribute column is a number
         data.features.forEach(d => {
           d.properties[mapConfig.attribute] = parseFloat(
-            d.properties[mapConfig.attribute]
+            d.properties[mapConfig.attribute].replace(',','.')
           );
         });
 

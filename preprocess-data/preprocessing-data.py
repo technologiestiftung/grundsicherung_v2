@@ -29,8 +29,6 @@ data.rename(columns={
 
 gpd.GeoDataFrame(data).to_file('data/preprocessed_data/xii.geojson', driver='GeoJSON', encoding='utf-8')
 
-quit()
-
 full_df = pd.DataFrame()
 
 for i in range (2006, 2022):
