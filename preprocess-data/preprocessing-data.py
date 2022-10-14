@@ -63,7 +63,7 @@ df = pd.DataFrame()
 #iterate thorugh all the xls files
 #header row ist third row // start coutning at 0
 #specify speacial Na values with "x" and "."
-for i in range (2006, 2022):
+for i in range (2019, 2022):
     df_temp = pd.read_excel('data/raw-data/lor/{}.xls'.format(str(i)), sheet_name='Tab E1', header=2, na_values=['x'])
     df_temp.rename(columns={' je 100 der Bevölkerung1)\n(ab 65 Jahre,\ninsgesamt)': 'y' + str(i), 
                             'Planungsraum':'Kennung', 'Unnamed: 1':'Name'}, inplace=True)
@@ -89,6 +89,10 @@ df = df.replace(to_replace='.', value=0)
 df = df.round(2)
 df = df.fillna('NA')
 
+
+df_old = pd.read_csv('data/raw-data/timelapse_bis_2018.csv', sep=",", dtype={'Kennung':str}, encoding='utf-8')
+df = df.merge(df_old, left_on='Kennung', right_on='Kennung')
+print(df)
 
 df.to_csv('data/preprocessed_data/timelapse_full.csv', encoding='utf-8')
 print("yes")
