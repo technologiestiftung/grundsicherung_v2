@@ -55,7 +55,7 @@ export function map() {
           .append("li")
           .text(d => d.nav[lang])
           .on("click", (d, i) => {
-            updateNav(i, 0);
+            updateNav(i, state.map);
             // updateOverlay(1);
             // console.log('click')
           });
