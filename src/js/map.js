@@ -55,7 +55,7 @@ export function map() {
           .append("li")
           .text(d => d.nav[lang])
           .on("click", (d, i) => {
-            updateNav(i, 0);
+            updateNav(i, state.map);
             // updateOverlay(1);
             // console.log('click')
           });
@@ -191,7 +191,7 @@ export function map() {
         // make sure the attribute column is a number
         data.features.forEach(d => {
           d.properties[mapConfig.attribute] = parseFloat(
-            d.properties[mapConfig.attribute]
+            d.properties[mapConfig.attribute].replace(',','.')
           );
         });
 

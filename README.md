@@ -8,8 +8,8 @@ Second version of Grundsicherung website
 ### Installation
 
 ```
+nvm use 13
 npm install
-npm install d3
 ```
 
 ### Start Dev Server
