@@ -136,6 +136,10 @@ export class Linechart {
           .attr("dy", ".71em")
           .text(ylabel);
 
+        // hide axis
+        svg_linechart.selectAll('.domain')
+          .attr('stroke-width', 0)
+
         //add tooltip
         var focus = svg_linechart
           .append("g")
