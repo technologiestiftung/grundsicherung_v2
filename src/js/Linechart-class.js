@@ -138,7 +138,7 @@ export class Linechart {
 
         // hide axis
         svg_linechart.selectAll('.domain')
-          .attr('stroke-width', 0)
+          .attr('stroke-width', 0);
 
         //add tooltip
         var focus = svg_linechart
