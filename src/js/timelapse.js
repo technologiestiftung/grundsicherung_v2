@@ -184,9 +184,9 @@ export function timelapse() {
                       d.properties.spatial_alias +
                       "</h3>" +
                       '<div class="tooltip--datawrapper"> <div class="tooltip--datawrapper--row">' +
-                      '<p class="attr">%</p>' +
+                      '<p class="attr">'+ (d.properties.value ? '%':'' ) + '</p>' +
                       '<p class="value">' +
-                      d.properties.value +
+                      (d.properties.value  || 'keine Daten') +
                       "</p>" +
                       "</div> </div>"
                   )

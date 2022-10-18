@@ -1040,16 +1040,18 @@ path:hover{
   margin-right: 1em;
   border-style: solid;
   border-width: thin;
-  color: #213A8F;
-  background: #DEE2EE;
+  color: #000000;
+  background: #fff;
+  border-color: #fff;
   max-height: 5em;
   padding: 0.8em 1em 0.8em 1em;
   transition: all .25s ease;
   font-weight: 600;
+  border-color: #213A8F;
 }
 
 ul#sub-navigation li.active{
-  color: white;
+  color: #fff;
   background: #213A8F;
   border-color: #213A8F;
   opacity: 1;
@@ -1057,7 +1059,7 @@ ul#sub-navigation li.active{
 }
 
 ul#sub-navigation li:hover {
-  color: white;
+  color: #fff;
   background: #213A8F;
   border-color: #213A8F;
 }
@@ -1078,23 +1080,24 @@ ul#sub-navigation li:hover {
 #main-navigation {
   float: left;
   overflow: auto;
+  margin-bottom: 0px !important;
 }
 
 ul#main-navigation li {
-  color: rgb(208, 1, 46);
-  background-color: rgb(255, 208, 208);
+  color: #000;
+  background-color: #fff;
 }
 
 ul#main-navigation li:hover {
   color: white;
-  background: rgb(208, 1, 46);
-  border-color: rgb(208, 1, 46);
+  background: #213A8F;
+  border-color: #213A8F;
 }
 
 ul#main-navigation li.active {
-  color: white;
-  background: rgb(208, 1, 46);
-  border-color: rgb(208, 1, 46);
+  border-color: #213A8F;
+  background: #213A8F;
+  color: #fff;
 }
 
 #content-topic {
